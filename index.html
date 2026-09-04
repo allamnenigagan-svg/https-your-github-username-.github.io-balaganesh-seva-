@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaganesh Utsav Committee | Vinayaka Chaturthi Seva</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: '#FF6F00',
+                        saffronLight: '#FFA000',
+                        deepRed: '#7A0000',
+                        royalGold: '#D4AF37',
+                        goldGlow: '#FFD700',
+                        festiveBg: '#FFFDF8'
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        cinzelDeco: ['Cinzel Decorative', 'serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #FFFDF8; }
+        .heading-font { font-family: 'Cinzel', serif; }
+        .deco-font { font-family: 'Cinzel Decorative', serif; }
+        .diya-glow { filter: drop-shadow(0 0 8px rgba(255, 170, 0, 0.7)); }
+
+        /* Printable Receipt Format */
+        @media print {
+            body * { visibility: hidden; }
+            #printableReceipt, #printableReceipt * { visibility: visible; }
+            #printableReceipt {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                margin: 0;
+                padding: 24px;
+                box-shadow: none;
+                border: 3px double #7A0000;
+            }
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-saffron selection:text-white">
+
+    <!-- Top Announcement Banner -->
+    <div class="bg-deepRed text-goldGlow text-xs sm:text-sm py-2 px-4 border-b border-royalGold/50 text-center font-medium tracking-wide">
+        🕉️ Balaganesh Utsav Committee - Vinayaka Chaturthi Seva Mahotsav 🕉️
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b-2 border-royalGold shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <span class="text-2xl sm:text-3xl text-saffron diya-glow">🪔</span>
+                <div>
+                    <h1 class="deco-font font-bold text-base sm:text-xl text-deepRed leading-tight">Balaganesh Utsav Committee</h1>
+                    <p class="text-[10px] sm:text-xs text-saffron font-bold tracking-wider uppercase">Vinayaka Chaturthi Pooja &amp; Annadanam</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <a href="#donate" class="bg-gradient-to-r from-saffron to-deepRed hover:from-amber-600 hover:to-red-900 text-white px-4 py-2 rounded-full font-bold text-xs sm:text-sm shadow-md transition transform hover:scale-105">
+                    <i class="fa-solid fa-hand-holding-heart mr-1.5"></i> Donate
+                </a>
+                <button onclick="openAdminModal()" class="text-gray-500 hover:text-deepRed p-1.5 sm:p-2" title="Admin Portal">
+                    <i class="fa-solid fa-user-shield text-base sm:text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="relative bg-gradient-to-b from-orange-100 via-amber-50 to-festiveBg py-10 sm:py-14 px-4 border-b border-amber-200 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="inline-block bg-saffron/10 border border-saffron/40 text-saffron font-bold text-xs uppercase px-3 py-1 rounded-full mb-3 shadow-sm">
+                Vinayaka Chaturthi Donation Purpose Only
+            </span>
+            <h2 class="deco-font text-2xl sm:text-4xl font-extrabold text-deepRed mb-3">
+                సర్వ విఘ్న నివారక గణపతి సన్నిధి
+            </h2>
+            <p class="text-gray-700 text-xs sm:text-sm max-w-xl mx-auto mb-6">
+                Your holy contributions support daily Abhishekam, Archana, Maha Annadanam, and Mandapam arrangements.
+            </p>
+            <div class="flex justify-center gap-3">
+                <a href="#donate" class="bg-saffron hover:bg-orange-600 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-lg transition">
+                    <i class="fa-solid fa-hands-praying mr-1.5"></i> Offer Seva
+                </a>
+                <a href="#gallery" class="bg-white border-2 border-royalGold text-deepRed hover:bg-amber-50 font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition">
+                    <i class="fa-regular fa-image mr-1.5"></i> View Gallery
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PHOTO GALLERY (6 Photos: Balaganesh Darshanam & Devotees) -->
+    <section id="gallery" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <h3 class="heading-font text-2xl sm:text-3xl font-bold text-deepRed">Balaganesh Darshanam</h3>
+                <div class="w-16 h-1 bg-royalGold mx-auto mt-2 rounded"></div>
+                <p class="text-xs sm:text-sm text-gray-500 mt-2">Darshanam &amp; Devotee Memories</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                
+                <!-- 1. Veda Pooja -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md border-2 border-amber-200 bg-amber-50 aspect-[4/5]">
+                    <img src="ganesh1.jpg" alt="Veda Pooja Ganesh" 
+                         onerror="this.onerror=null; this.src='ChatGPT Image Sep 4, 2026, 02_18_26 PM.png';"
+                         class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-white text-xs font-semibold">
+                        Veda Pooja Balaganesh
+                    </div>
+                </div>
+
+                <!-- 2. Mandapam Darshan -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md border-2 border-amber-200 bg-amber-50 aspect-[4/5]">
+                    <img src="ganesh2.jpg" alt="Mandapam Darshan" 
+                         onerror="this.onerror=null; this.src='WhatsApp Image 2026-09-04 at 2.23.10 PM.jpeg';"
+                         class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-white text-xs font-semibold">
+                        Mandapam Grand Darshan
+                    </div>
+                </div>
+
+                <!-- 3. Shubh Labh -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md border-2 border-amber-200 bg-amber-50 aspect-[4/5]">
+                    <img src="ganesh3.jpg" alt="Shubh Labh Ganesha" 
+                         onerror="this.onerror=null; this.src='WhatsApp Image 2026-09-04 at 2.27.56 PM.jpeg';"
+                         class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-white text-xs font-semibold">
+                        Shubh Labh Ganapathi
+                    </div>
+                </div>
+
+                <!-- 4. Panchamukha -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md border-2 border-amber-200 bg-amber-50 aspect-[4/5]">
+                    <img src="ganesh4.jpg" alt="Panchamukha Maha Ganesha" 
+                         onerror="this.onerror=null; this.src='WhatsApp Image 2026-09-04 at 2.31.27 PM.jpeg';"
+                         class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-white text-xs font-semibold">
+                        Panchamukha Maha Ganesha
+                    </div>
+                </div>
+
+                <!-- 5. Alankrita -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md border-2 border-amber-200 bg-amber-50 aspect-[4/5]">
+                    <img src="ganesh5.jpg" alt="Alankrita Balaganesh" 
+                         onerror="this.onerror=null; this.src='WhatsApp Image 2026-09-04 at 2.33.45 PM.jpeg';"
+                         class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-white text-xs font-semibold">
+                        Alankrita Balaganesh
+                    </div>
+                </div>
+
+                <!-- 6. Devotees & Families -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md border-2 border-amber-200 bg-amber-50 aspect-[4/5]">
+                    <img src="ganesh6.jpg" alt="Community Families" 
+                         onerror="this.onerror=null; this.src='WhatsApp Image 2026-09-04 at 2.28.38 PM.jpeg';"
+                         class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-white text-xs font-semibold">
+                        Devotees &amp; Families
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DONATION SECTION (Clean Form: Name, Phone, Gotram, Deposit Amount + QR Code) -->
+    <section id="donate" class="py-12 bg-gradient-to-b from-amber-50/70 via-orange-50/50 to-amber-50/70 border-t border-b border-amber-200">
+        <div class="max-w-4xl mx-auto px-4">
+            
+            <div class="text-center mb-8">
+                <span class="bg-saffron/10 text-saffron border border-saffron/40 font-bold tracking-wider text-[11px] uppercase px-3 py-1 rounded-full">
+                    Vinayaka Chaturthi Seva
+                </span>
+                <h3 class="deco-font text-2xl sm:text-4xl font-bold text-deepRed mt-2">Donation &amp; Sankalpam</h3>
+                <div class="w-16 h-1 bg-royalGold mx-auto my-2 rounded"></div>
+                <p class="text-xs sm:text-sm text-gray-600">Scan QR Code, enter your details, and download your verified receipt.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                
+                <!-- QR Code & UPI Column -->
+                <div class="md:col-span-5 bg-white p-6 rounded-2xl shadow-md border-2 border-royalGold/40 text-center relative">
+                    <h4 class="font-bold text-deepRed text-base mb-1">Step 1: Scan &amp; Deposit</h4>
+                    <p class="text-xs text-gray-500 mb-4">GPay / PhonePe / Paytm / BHIM</p>
+                    
+                    <div class="bg-amber-50 p-4 rounded-2xl border-2 border-dashed border-royalGold inline-block mb-4 shadow-inner">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=8688992807@upi&pn=Balaganesh%20Utsav%20Committee&cu=INR" 
+                             alt="UPI QR Code" class="w-40 h-40 mx-auto rounded-lg">
+                        <div class="mt-2 text-xs font-mono font-bold text-deepRed bg-white py-1 px-2 rounded border border-amber-200">
+                            UPI: 8688992807@upi
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <a href="upi://pay?pa=8688992807@upi&pn=Balaganesh%20Utsav%20Committee&cu=INR" 
+                           class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-3 rounded-xl text-xs shadow-md transition">
+                           <i class="fa-solid fa-mobile-screen"></i> Pay Directly via UPI App
+                        </a>
+                        <p class="text-[11px] text-gray-600">Committee Helpline: <strong class="text-deepRed">8688992807</strong></p>
+                    </div>
+                </div>
+
+                <!-- Clean Form: Name, Phone, Gotram, Deposit Amount -->
+                <div class="md:col-span-7 bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-2 border-royalGold/60">
+                    <h4 class="font-bold text-deepRed text-lg mb-1">Step 2: Enter Donor Details</h4>
+                    <p class="text-xs text-gray-500 mb-5">Fill in your information for the official receipt and Sankalpam.</p>
+
+                    <form id="donationForm" onsubmit="handleDonationSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Devotee Full Name *</label>
+                            <input type="text" id="donorName" required placeholder="Enter devotee full name"
+                                   class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-saffron text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number *</label>
+                            <input type="tel" id="donorMobile" required pattern="[0-9]{10}" placeholder="10-digit mobile number"
+                                   class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-saffron text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Gotram (గోత్రం) *</label>
+                            <input type="text" id="donorGotram" required placeholder="e.g. Siva, Kasyapa, Bharadwaja, etc."
+                                   class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-saffron text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Deposit Amount (₹) *</label>
+                            <div class="grid grid-cols-4 gap-1.5 mb-2">
+                                <button type="button" onclick="setAmount(251)" class="bg-amber-100 hover:bg-amber-200 text-deepRed text-xs font-bold py-1.5 rounded transition">₹251</button>
+                                <button type="button" onclick="setAmount(501)" class="bg-amber-100 hover:bg-amber-200 text-deepRed text-xs font-bold py-1.5 rounded transition">₹501</button>
+                                <button type="button" onclick="setAmount(1116)" class="bg-amber-100 hover:bg-amber-200 text-deepRed text-xs font-bold py-1.5 rounded transition">₹1,116</button>
+                                <button type="button" onclick="setAmount(2500)" class="bg-amber-100 hover:bg-amber-200 text-deepRed text-xs font-bold py-1.5 rounded transition">₹2,500</button>
+                            </div>
+                            <input type="number" id="donorAmount" required min="1" placeholder="Enter deposit amount in ₹"
+                                   class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-saffron text-sm font-semibold text-deepRed">
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-saffron to-deepRed hover:from-orange-600 hover:to-red-900 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg transition duration-200 text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-receipt"></i> Submit &amp; Generate Receipt
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deepRed text-white py-8 px-4 border-t-4 border-royalGold">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+            <div>
+                <h4 class="deco-font font-bold text-base sm:text-lg text-goldGlow">Balaganesh Utsav Committee</h4>
+                <p class="text-xs text-orange-200 mt-1">Dedicated exclusively to Vinayaka Chaturthi Seva.</p>
+            </div>
+            <div class="text-xs text-orange-100 space-y-1">
+                <p><i class="fa-solid fa-phone mr-1 text-goldGlow"></i> Seva Helpline: <strong>8688992807</strong></p>
+                <p><i class="fa-solid fa-location-dot mr-1 text-goldGlow"></i> Ganesh Mandapam</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- OFFICIAL RECEIPT MODAL -->
+    <div id="receiptModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-md w-full overflow-hidden shadow-2xl relative border border-royalGold">
+            
+            <div id="printableReceipt" class="p-6 bg-festiveBg border-4 border-royalGold m-2 rounded-xl">
+                <div class="text-center border-b-2 border-deepRed pb-3 mb-3">
+                    <div class="text-2xl text-saffron mb-1">🕉️ శ్రీ గణేశాయ నమః 🕉️</div>
+                    <h3 class="deco-font font-bold text-xl text-deepRed">Balaganesh Utsav Committee</h3>
+                    <p class="text-[11px] font-bold text-saffron tracking-wider uppercase">Vinayaka Chaturthi Seva Receipt</p>
+                    <p class="text-[10px] text-gray-500 font-medium">Helpline: 8688992807</p>
+                </div>
+
+                <div class="mb-4 text-center">
+                    <span class="inline-block bg-amber-100 border border-amber-400 text-amber-900 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Status: Pending Verification
+                    </span>
+                    <p class="text-[9px] text-gray-500 mt-0.5 italic">(Subject to committee realization / manual bank confirmation)</p>
+                </div>
+
+                <div class="space-y-2 text-xs text-gray-700 bg-white p-4 rounded-xl border border-orange-100 shadow-inner">
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span class="text-gray-500">Receipt No:</span>
+                        <span class="font-mono font-bold text-deepRed" id="recId">#BG-0000</span>
+                    </div>
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span class="text-gray-500">Date &amp; Time:</span>
+                        <span class="font-semibold" id="recDate">-</span>
+                    </div>
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span class="text-gray-500">Devotee Name:</span>
+                        <span class="font-bold text-gray-900" id="recName">-</span>
+                    </div>
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span class="text-gray-500">Phone Number:</span>
+                        <span class="font-semibold" id="recMobile">-</span>
+                    </div>
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span class="text-gray-500">Gotram (గోత్రం):</span>
+                        <span class="font-bold text-deepRed" id="recGotram">-</span>
+                    </div>
+                    <div class="flex justify-between py-1 border-b border-gray-100">
+                        <span class="text-gray-500">Purpose:</span>
+                        <span class="font-semibold text-gray-800">Vinayaka Chaturthi Seva</span>
+                    </div>
+                    <div class="flex justify-between items-center pt-2">
+                        <span class="text-sm font-bold text-gray-800">Deposit Amount:</span>
+                        <span class="text-xl font-extrabold text-saffron" id="recAmount">₹0</span>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4 pt-2 border-t border-dashed border-gray-300">
+                    <p class="text-[11px] font-bold text-deepRed">గణపతి బప్పా మోరియా! మంగళమూర్తి మోరియా!</p>
+                    <p class="text-[9px] text-gray-500">May Lord Balaganesh bless your family with health, wealth &amp; prosperity.</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-100 px-5 py-3 flex justify-between gap-2 no-print border-t border-gray-200">
+                <button onclick="closeReceiptModal()" class="flex-1 py-2 text-xs font-semibold text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
+                    Close
+                </button>
+                <button onclick="shareOnWhatsApp()" class="flex-1 py-2 text-xs font-bold text-white bg-green-600 hover:bg-green-700 rounded-lg shadow flex items-center justify-center gap-1">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </button>
+                <button onclick="window.print()" class="flex-1 py-2 text-xs font-bold text-white bg-deepRed hover:bg-red-900 rounded-lg shadow flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-print"></i> Print / PDF
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ADMIN MODAL -->
+    <div id="adminModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl border-2 border-royalGold">
+            
+            <div class="bg-deepRed text-white p-4 flex justify-between items-center border-b border-royalGold">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-shield-halved text-goldGlow text-lg"></i>
+                    <h3 class="font-bold text-sm sm:text-base">Balaganesh Committee - Admin Portal</h3>
+                </div>
+                <button onclick="closeAdminModal()" class="text-white hover:text-goldGlow text-xl font-bold">&times;</button>
+            </div>
+
+            <div id="adminAuthSection" class="p-8 text-center">
+                <div class="max-w-xs mx-auto">
+                    <i class="fa-solid fa-lock text-4xl text-saffron mb-3"></i>
+                    <h4 class="font-bold text-gray-800 mb-1">Restricted Committee Area</h4>
+                    <p class="text-xs text-gray-500 mb-4">Enter passcode to view donor records.</p>
+                    <input type="password" id="adminKeyInput" placeholder="Password (default: admin123)"
+                           class="w-full px-3.5 py-2.5 text-xs sm:text-sm border rounded-lg focus:ring-2 focus:ring-saffron focus:outline-none mb-3">
+                    <button onclick="verifyAdmin()" class="w-full bg-deepRed text-white py-2.5 rounded-lg text-xs sm:text-sm font-semibold hover:bg-red-900 transition">
+                        Login
+                    </button>
+                </div>
+            </div>
+
+            <div id="adminDataSection" class="p-4 sm:p-6 hidden overflow-y-auto flex-1">
+                <div class="flex flex-wrap justify-between items-center gap-3 mb-4 bg-amber-50 p-3 rounded-xl border border-amber-200">
+                    <div>
+                        <span class="text-xs text-gray-600">Total Donors: <strong id="totalDonorsCount" class="text-deepRed text-sm">0</strong></span>
+                        <span class="mx-2 text-gray-300">|</span>
+                        <span class="text-xs text-gray-600">Total Deposit: <strong id="totalDonationAmount" class="text-saffron text-sm">₹0</strong></span>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="exportToCSV()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow">
+                            <i class="fa-solid fa-file-excel mr-1"></i> Export Excel (CSV)
+                        </button>
+                        <button onclick="logoutAdmin()" class="bg-gray-200 hover:bg-gray-300 text-gray-700 text-xs font-semibold px-3 py-1.5 rounded-lg">
+                            Logout
+                        </button>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto border border-gray-200 rounded-xl">
+                    <table class="w-full text-left text-xs">
+                        <thead class="bg-amber-100/70 text-deepRed font-bold border-b border-amber-200">
+                            <tr>
+                                <th class="p-2.5">Date</th>
+                                <th class="p-2.5">Receipt #</th>
+                                <th class="p-2.5">Devotee Name</th>
+                                <th class="p-2.5">Phone Number</th>
+                                <th class="p-2.5">Gotram (గోత్రం)</th>
+                                <th class="p-2.5 text-right">Deposit Amount (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="donorTableBody" class="divide-y divide-gray-100"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        let currentReceiptData = null;
+
+        function setAmount(val) {
+            document.getElementById('donorAmount').value = val;
+        }
+
+        function handleDonationSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('donorName').value.trim();
+            const mobile = document.getElementById('donorMobile').value.trim();
+            const gotram = document.getElementById('donorGotram').value.trim();
+            const amount = document.getElementById('donorAmount').value.trim();
+
+            const receiptNumber = 'BG-' + Math.floor(100000 + Math.random() * 900000);
+            const now = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
+
+            const donorRecord = {
+                receiptNo: receiptNumber,
+                date: now,
+                name: name,
+                mobile: mobile,
+                gotram: gotram,
+                amount: parseFloat(amount)
+            };
+
+            currentReceiptData = donorRecord;
+
+            let donors = JSON.parse(localStorage.getItem('bg_donors') || '[]');
+            donors.unshift(donorRecord);
+            localStorage.setItem('bg_donors', JSON.stringify(donors));
+
+            document.getElementById('recId').innerText = '#' + receiptNumber;
+            document.getElementById('recDate').innerText = now;
+            document.getElementById('recName').innerText = name;
+            document.getElementById('recMobile').innerText = mobile;
+            document.getElementById('recGotram').innerText = gotram;
+            document.getElementById('recAmount').innerText = '₹' + Number(amount).toLocaleString('en-IN');
+
+            document.getElementById('donationForm').reset();
+            document.getElementById('receiptModal').classList.remove('hidden');
+        }
+
+        function closeReceiptModal() {
+            document.getElementById('receiptModal').classList.add('hidden');
+        }
+
+        function shareOnWhatsApp() {
+            if (!currentReceiptData) return;
+            const msg = `🕉️ *Balaganesh Utsav Committee - Seva Receipt*%0A` +
+                        `*Receipt No:* %23${currentReceiptData.receiptNo}%0A` +
+                        `*Devotee Name:* ${currentReceiptData.name}%0A` +
+                        `*Phone:* ${currentReceiptData.mobile}%0A` +
+                        `*Gotram:* ${currentReceiptData.gotram}%0A` +
+                        `*Deposit Amount:* ₹${currentReceiptData.amount}%0A` +
+                        `*Status:* Pending Verification%0A` +
+                        `*Committee Helpline:* 8688992807`;
+            window.open(`https://api.whatsapp.com/send?phone=918688992807&text=${msg}`, '_blank');
+        }
+
+        const ADMIN_PASS = "admin123";
+
+        function openAdminModal() {
+            document.getElementById('adminModal').classList.remove('hidden');
+        }
+
+        function closeAdminModal() {
+            document.getElementById('adminModal').classList.add('hidden');
+        }
+
+        function verifyAdmin() {
+            const entered = document.getElementById('adminKeyInput').value;
+            if(entered === ADMIN_PASS) {
+                document.getElementById('adminAuthSection').classList.add('hidden');
+                document.getElementById('adminDataSection').classList.remove('hidden');
+                loadAdminData();
+            } else {
+                alert('Invalid Admin Password');
+            }
+        }
+
+        function logoutAdmin() {
+            document.getElementById('adminKeyInput').value = '';
+            document.getElementById('adminAuthSection').classList.remove('hidden');
+            document.getElementById('adminDataSection').classList.add('hidden');
+        }
+
+        function loadAdminData() {
+            const donors = JSON.parse(localStorage.getItem('bg_donors') || '[]');
+            const tbody = document.getElementById('donorTableBody');
+            tbody.innerHTML = '';
+
+            let total = 0;
+            donors.forEach(d => {
+                total += d.amount;
+                const row = document.createElement('tr');
+                row.className = "hover:bg-amber-50/60";
+                row.innerHTML = `
+                    <td class="p-2.5 text-gray-500 whitespace-nowrap">${d.date}</td>
+                    <td class="p-2.5 font-mono font-bold text-deepRed">${d.receiptNo}</td>
+                    <td class="p-2.5 font-semibold text-gray-900">${d.name}</td>
+                    <td class="p-2.5 text-gray-600">${d.mobile}</td>
+                    <td class="p-2.5 text-deepRed font-medium">${d.gotram || '-'}</td>
+                    <td class="p-2.5 text-right font-bold text-saffron">₹${d.amount.toLocaleString('en-IN')}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            document.getElementById('totalDonorsCount').innerText = donors.length;
+            document.getElementById('totalDonationAmount').innerText = '₹' + total.toLocaleString('en-IN');
+        }
+
+        function exportToCSV() {
+            const donors = JSON.parse(localStorage.getItem('bg_donors') || '[]');
+            if(donors.length === 0) {
+                alert('No donor records to export.');
+                return;
+            }
+
+            let csvContent = "data:text/csv;charset=utf-8,Receipt No,Date,Devotee Name,Phone Number,Gotram,Deposit Amount(INR)\n";
+            donors.forEach(d => {
+                csvContent += `"${d.receiptNo}","${d.date}","${d.name}","${d.mobile}","${d.gotram || ''}","${d.amount}"\n`;
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `Balaganesh_Donors_${new Date().toISOString().slice(0,10)}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
